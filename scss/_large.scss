@@ -1,0 +1,23 @@
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+
+nav {
+    ul{
+        display: flex;
+        justify-content: left;
+    }
+    ul li a {
+        border: none;
+
+    }
+    ul li a {
+        
+    }
+    ul li a:hover, ul li.active a {
+        
+    }
+}
+
+/* NAVIGATION STUFF GOES HERE  */

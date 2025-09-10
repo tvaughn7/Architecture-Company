@@ -1,0 +1,101 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION --------------------------- */
+#navWrapper {
+    background-color: lighten($greyColor, 15%);
+}
+
+nav {
+    ul {
+        padding: 0;
+        margin: 0 auto; // center block
+       
+    }
+    ul li {
+        list-style-type: none;
+        text-align: center;
+        border-bottom: 1px solid lighten($greyColor, 5%);
+    }
+    ul li:last-child {
+        border-bottom: none; // remove divider on last item
+    }
+    ul li a {
+        display: block;
+        padding: .75rem 1rem;
+        text-decoration: none;
+        color: $primaryColor;
+        font-weight: $normalWeight;
+        transition: background-color .2s ease, color .2s ease;
+    }
+    ul li a:hover, ul li.active a {
+        background-color: $primaryColor;
+        color: #fff;
+    }
+}
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter .5rem $gutter; // top, right, bottom, left
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer
