@@ -21,3 +21,20 @@ nav {
 }
 
 /* NAVIGATION STUFF GOES HERE  */
+
+/* Hero image styles for large screens (desktop) */
+@media (min-width: 1101px) {
+    .hero,
+    .hero picture {
+        display: block;
+        width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* make a taller hero on desktop */
+        max-height: 64vh;
+    }
+}
